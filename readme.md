@@ -76,8 +76,6 @@ La funzione riceve in input una matrice rappresentata come lista di liste e rest
 
 Il risultato deve corrispondere al numero massimo di righe linearmente indipendenti presenti nella matrice.
 
-Il calcolo deve essere effettuato utilizzando operazioni di algebra lineare numerica basate su trasformazioni della matrice in una forma equivalente che consenta di individuare le dipendenze lineari tra le righe.
-
 ---
 
 ### Esempi
