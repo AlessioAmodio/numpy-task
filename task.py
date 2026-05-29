@@ -12,7 +12,16 @@ def prodotto_scalare(v1: list, v2: list) -> float:
 
 def rango_matrice(m: list) -> int:
     """Sub-task 2: Calcola il rango di una matrice."""
-    pass
+    from numpy.linalg import matrix_rank
+    k=len(m)
+    flag=1
+    for i in range(k):
+        if(len(m[i])!=len(m)):
+            flag=0
+    if (flag==0):
+        return ("Rango non valido - Matrice non quadrata")
+    rank=matrix_rank(m)
+    return rank
 
 def risolvi_sistema_lineare(A: list, b: list) -> np.ndarray:
     """Sub-task 3: Risolvere un Sistema Lineare."""
@@ -29,7 +38,7 @@ def operazioni_elemento_per_elemento(v1: list) -> tuple:
 
 def main():
     print("Sub-task 1:", prodotto_scalare([5, 7, 3], [4, 5, 6]))
-    print("Sub-task 1:", rango_matrice([[1, 2], [3, 4]]))
+    print("Sub-task 1:", rango_matrice([[2, 4, 1], [0, 1,0],[1,4,0]]))
     print("Sub-task 3:", risolvi_sistema_lineare([[2, 1], [1, 3]], [5, 7]))
     print("Sub-task 4:", correlazione_matrici([[1, 2], [3, 4]], [[2, 4], [6, 8]]))
     print("Sub-task 5:", operazioni_elemento_per_elemento([0, 0.5, 1, -0.5]))
