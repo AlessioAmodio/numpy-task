@@ -1,10 +1,14 @@
+import numpy
 import numpy as np
 
 # Controlla il file readme.md per i dettagli su ciascun sub-task
 
 def prodotto_scalare(v1: list, v2: list) -> float:
     """Sub-task 1: Prodotto Scalare."""
-    pass
+    if(len(v1) != len(v2)):
+        return ("Prodotto Scalare non valido - Dimensioni diverse")
+    ris=numpy.dot(v1, v2)
+    return ris
 
 def rango_matrice(m: list) -> int:
     """Sub-task 2: Calcola il rango di una matrice."""
@@ -24,7 +28,7 @@ def operazioni_elemento_per_elemento(v1: list) -> tuple:
 
 
 def main():
-    print("Sub-task 1:", prodotto_scalare([1, 2, 3], [4, 5, 6]))
+    print("Sub-task 1:", prodotto_scalare([5, 7, 3], [4, 5, 6]))
     print("Sub-task 1:", rango_matrice([[1, 2], [3, 4]]))
     print("Sub-task 3:", risolvi_sistema_lineare([[2, 1], [1, 3]], [5, 7]))
     print("Sub-task 4:", correlazione_matrici([[1, 2], [3, 4]], [[2, 4], [6, 8]]))
