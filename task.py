@@ -25,6 +25,15 @@ def rango_matrice(m: list) -> int:
 
 def risolvi_sistema_lineare(A: list, b: list) -> np.ndarray:
     """Sub-task 3: Risolvere un Sistema Lineare."""
+    k = len(A)
+    flag = 0
+    for i in range(k):
+        if (len(A[i]) == len(b)):
+            flag = 1
+    if (flag == 0):
+        return ("Sistema non risolvibile")
+    sol=np.linalg.solve(A,b)
+    return sol
     pass
 
 def correlazione_matrici(m1: list, m2: list) -> np.ndarray:
@@ -39,7 +48,7 @@ def operazioni_elemento_per_elemento(v1: list) -> tuple:
 def main():
     print("Sub-task 1:", prodotto_scalare([5, 7, 3], [4, 5, 6]))
     print("Sub-task 1:", rango_matrice([[2, 4, 1], [0, 1,0],[1,4,0]]))
-    print("Sub-task 3:", risolvi_sistema_lineare([[2, 1], [1, 3]], [5, 7]))
+    print("Sub-task 3:", risolvi_sistema_lineare([[1, 0],[0,1],[2,3]], [3, 4,5]))
     print("Sub-task 4:", correlazione_matrici([[1, 2], [3, 4]], [[2, 4], [6, 8]]))
     print("Sub-task 5:", operazioni_elemento_per_elemento([0, 0.5, 1, -0.5]))
 
