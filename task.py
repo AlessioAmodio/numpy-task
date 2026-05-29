@@ -60,6 +60,10 @@ def operazioni_elemento_per_elemento(v1: list) -> tuple:
         v2.append(np.cos(np.array(v1) * np.pi / 180.))
 
     for i in range(k):
+        v2.append(np.arcsin(np.array(v1) * np.pi / 180.))
+
+    for i in range(k):
+        v2.append(np.arccos(np.array(v1) * np.pi / 180.))
     return (v2)
 
 
